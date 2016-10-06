@@ -10,7 +10,7 @@ gem 'spring', :group => :development
 
 gem 'sqlite3'
 
-
+gem 'dredd_hooks', '0.1.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

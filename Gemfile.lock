@@ -39,6 +39,7 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     concurrent-ruby (1.0.2)
+    dredd_hooks (0.1.0)
     erubis (2.7.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -105,6 +106,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dredd_hooks (= 0.1.0)
   rails (= 4.2.4)
   rails-api
   spring
