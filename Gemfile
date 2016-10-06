@@ -26,3 +26,11 @@ gem 'dredd_hooks', '0.1.0'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+end

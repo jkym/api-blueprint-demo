@@ -8,6 +8,13 @@ dependencies:
     - npm install -g dredd@stable
   override:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+database:
+  override:
+    - bundle exec rake db:create db:migrate db:seed RAILS_ENV=test
+
 test:
   override:
-    - dredd --config apib/dredd.yml
+    - bundle exec rspec
+
+  #post:
+  #  - bundle exec dredd --config apib/dredd.yml
