@@ -2,7 +2,7 @@ dry-run: null
 hookfiles: ./apib/dredd_hooks.rb
 language: ruby
 sandbox: false
-server: bin/rails server -b 0.0.0.0 -p 3333
+server: bin/rails server -b 0.0.0.0 -p 3333 -e test
 server-wait: 3
 init: false
 custom:
