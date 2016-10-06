@@ -3,4 +3,4 @@ dependencies:
     - npm install -g dredd@stable
 test:
   pre:
-    - cd apib; dredd
+    - dredd --config apib/dredd.yml

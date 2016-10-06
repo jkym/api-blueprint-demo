@@ -1,8 +1,8 @@
 dry-run: null
-hookfiles: ./dredd_hooks.rb
+hookfiles: ./apib/dredd_hooks.rb
 language: ruby
 sandbox: false
-server: rails server -b 0.0.0.0
+server: rails server -b 0.0.0.0 -p 3333
 server-wait: 3
 init: false
 custom:
@@ -30,6 +30,6 @@ hooks-worker-term-timeout: 5000
 hooks-worker-term-retry: 500
 hooks-worker-handler-host: localhost
 hooks-worker-handler-port: 61321
-config: ./dredd.yml
-blueprint: user.apib
-endpoint: 'http://localhost:3000'
+config: ./apib/dredd.yml
+blueprint: ./apib/user.apib
+endpoint: 'http://localhost:3333'
