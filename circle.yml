@@ -1,6 +1,13 @@
+machine:
+  timezone: Asia/Tokyo
+  environment:
+    APIB_DIR: ${HOME}/${CIRCLE_PROJECT_REPONAME}
+
 dependencies:
   pre:
     - npm install -g dredd@stable
+  override:
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
 test:
-  pre:
+  override:
     - dredd --config apib/dredd.yml
