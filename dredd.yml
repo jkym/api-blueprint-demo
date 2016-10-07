@@ -1,5 +1,5 @@
 dry-run: null
-hookfiles: ./apib/dredd_hooks.rb
+hookfiles: ./dredd_hooks.rb
 language: ruby
 sandbox: false
 server: bin/rails server -b 0.0.0.0 -p 3333 -e test
@@ -31,5 +31,6 @@ hooks-worker-term-retry: 500
 hooks-worker-handler-host: localhost
 hooks-worker-handler-port: 61321
 config: ./dredd.yml
-blueprint: ./apiary.apib
+blueprint: ./apib/*
+#blueprint: ./apiary.apib
 endpoint: 'http://localhost:3333'

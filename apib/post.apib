@@ -1,0 +1,72 @@
+# post API
+Welcome to the post API.
+
+# posts action [/posts]
+
+## Create post [POST]
+
+Create a new post
+
++ Request posts (application/json; charset=utf-8)
+    + Attributes
+      + post (post_params)
+
++ Response 201 (application/json; charset=utf-8)
+    + Attributes (post)
+
+## Get posts [GET]
+
+Returns post lsit.
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (array)
+        + (post)
+
+
+# post action [/posts/{id}]
+
++ Parameters
+    + id: `1` (enum[string]) - The ID of the desired post.
+        + Members
+            + `1`
+            + `2`
+            + `3`
+
+## Get post [GET]
+
+Returns post.
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (post)
+
+## Update post [PUT]
+
+Update post.
+
++ Request posts (application/json; charset=utf-8)
+    + Attributes
+      + post (post_params)
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (post)
+
+## Delete post [DELETE]
+
+Delete post.
+
++ Response 204
+
+# Data Structures
+
+## post (object)
+
++ id: 1 (number) - Id
++ title: TITILE (string)
++ contents: CONTENTS CONTENTS (string)
++ created_at: `2016-10-06T03:52:27.345Z` (string) - CreatedTime 
++ updated_at: `2016-10-06T03:52:27.345Z` (string) - UpdatedTime 
+
+## post_params (object)
++ title: TITILE (string)
++ contents: CONTENTS CONTENTS (string)
+

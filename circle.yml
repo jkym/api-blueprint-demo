@@ -18,4 +18,4 @@ test:
     - bundle exec rspec
 
   post:
-    - dredd
+    - sh bin/run_dredd
