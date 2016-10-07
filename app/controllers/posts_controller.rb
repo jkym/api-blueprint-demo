@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update(post_params)
-      head :no_content
+      render json: @post, status: :ok, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity
     end
